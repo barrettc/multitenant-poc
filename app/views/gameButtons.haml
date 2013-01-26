@@ -1,0 +1,6 @@
+- if @userOnList
+  %button{:class => "btn btn-primary btn-large disabled", :id => "signup", :disabled => "disabled", :style => "margin-right:20px; margin-bottom:20px;"}Sign up to play!
+  %a{:class => "btn btn-small btn-danger", :id => "remove", :style => "margin-right:20px; margin-bottom:20px;"}Remove me from the game
+- else
+  %a{class:"btn btn-primary btn-large", :id => "signup", :style => "margin-right:20px; margin-bottom:20px;"}Sign up to play!
+  %button{:class => "btn btn-small btn-danger disabled", :id => "remove", :disabled => "disabled", :style => "margin-right:20px; margin-bottom:20px;"}Remove me from the game

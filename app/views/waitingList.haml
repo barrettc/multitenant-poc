@@ -1,0 +1,21 @@
+- if !@waitingListPlayers.empty?
+  %p Waiting List:
+  %table{:class => "table table-striped"}
+    %thead
+      %tr
+        %th
+          \#
+        %th
+          Player
+        %th
+          Signup Time
+    - cnt = 0
+    - @waitingListPlayers.each do |player, signupTime|
+      %tr
+        %td
+          - cnt += 1
+          #{cnt}
+        %td
+          #{player.firstName} #{player.lastName}
+        %td
+          #{signupTime.localtime.strftime("%b %e, %l:%M %p")}
