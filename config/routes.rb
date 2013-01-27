@@ -1,8 +1,12 @@
 HomeGame::Application.routes.draw do
+  require 'subdomain'
+
+  constraints(Subdomain) do
+    resources :foos
+    match '/' => 'foos#index'
+  end
+
   root :to => 'welcome#index'
-
-  resources :foos
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
